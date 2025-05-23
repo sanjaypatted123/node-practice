@@ -104,4 +104,11 @@ http.createServer(function (req, res) {
   });
 }).listen(8080);
 
-
+//simple example for uppercase package usage installed by npm install method
+var http = require('http');
+var uc = require('upper-case');
+http.createServer(function (req, res) {
+  res.writeHead(200, {'Content-Type': 'text/html'});
+  res.write(uc.upperCase("Hello World!"));
+  res.end();
+}).listen(8080);
